@@ -1,0 +1,27 @@
+[
+    {
+      "category": "TRACKSUITS",
+      "brands": ["Celine", "Stone Island", "Prada", "Dior", "Palm Angels", "Trapstar", "Fendi", "Moncler", "Burberry", "Off-White"]
+    },
+    {
+      "category": "T-SHIRTS",
+      "brands": ["Balenciaga", "Louis Vuitton", "Palm Angels", "Givenchy", "Balmain", "Burberry", "Dior", "Fendi", "Off-White", "Moncler", "Gucci", "Versace", "Prada", "Amiri", "Stone Island", "Valentino", "Celine", "D&G", "CP Company"]
+    },
+    {
+      "category": "SHORTS",
+      "brands": ["Louis Vuitton", "Dior", "Moncler", "Amiri", "Stone Island", "Burberry", "Off-White", "CP Company", "Palm Angels", "Moschino", "Balenciaga", "Valentinos"]
+    },
+    {
+      "category": "T-SHIRT & SHORT SETS",
+      "brands": ["Palm Angels", "Balenciaga", "CP Company", "Off-White", "Burberry", "Stone Island", "Louis Vuitton", "Gucci"]
+    },
+    {
+      "category": "JEANS & CARGOS",
+      "brands": ["Dsquared Jeans", "CP Company Cargos", "Stone Island Cargos"]
+    },
+    {
+      "category": "HOODIES & SWEATSHIRTS",
+      "brands": ["Off-White", "Balmain", "Dior", "Louis Vuitton", "Stone Island", "Moncler", "Essentials", "Burberry", "Moschino", "Burberry", "Celine", "Palm Angels", "CP Company", "Prada"]
+    }
+  ]
+  

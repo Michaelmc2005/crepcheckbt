@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrepCheckBT</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('fibre.jpg');
+      background-size: cover;
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      height: 100%; 
+      width: 100%; 
+      z-index: -1; 
+      backdrop-filter: blur(2px);
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">CrepCheckBT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- You can repeat this li for each category -->
+        
+        
+        <!-- Other Categories -->
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Welcome to CrepCheckBT</h1>
+    <p>Find the best designer items at unbeatable prices!</p>
+    <!-- Place where you can put images for products -->
+    <div class="row">
+      <!-- Repeat this for each product -->
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Burberry Jogger Shorts & T-Shirt Sets</h2>
+        <p>S-XXL £180</p>
+      </div>
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Product Title</h2>
+        <p>Product description</p>
+      </div>
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Product Title</h2>
+        <p>Product description</p>
+      </div>
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Product Title</h2>
+        <p>Product description</p>
+      </div>
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Product Title</h2>
+        <p>Product description</p>
+      </div>
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Product Title</h2>
+        <p>Product description</p>
+      </div>
+      <div class="col-md-4">
+        <img src="path_to_product_image" alt="product_image" class="img-fluid">
+        <h2>Product Title</h2>
+        <p>Product description</p>
+      </div>
+
+
+      <!-- Other Products -->
+    </div>
+  </div>
+  <script>
+    fetch('./brandCat.json')
+      .then(response => response.json())
+      .then(data => {
+        let navbar = document.querySelector('.navbar-nav');
+        data.forEach(item => {
+          let listItem = document.createElement('li');
+          listItem.classList.add('nav-item', 'dropdown');
+  
+          let dropdownLink = document.createElement('a');
+          dropdownLink.classList.add('nav-link', 'dropdown-toggle');
+          dropdownLink.href = '#';
+          dropdownLink.id = 'navbarDropdownMenuLink';
+          dropdownLink.role = 'button';
+          dropdownLink.dataset.toggle = 'dropdown';
+          dropdownLink.innerHTML = item.category;
+  
+          let dropdownMenu = document.createElement('div');
+          dropdownMenu.classList.add('dropdown-menu');
+          dropdownMenu.setAttribute('aria-labelledby', 'navbarDropdownMenuLink');
+  
+          item.brands.forEach(brand => {
+            let brandItem = document.createElement('a');
+            brandItem.classList.add('dropdown-item');
+            brandItem.href = '#';
+            brandItem.innerHTML = brand;
+            dropdownMenu.appendChild(brandItem);
+          });
+  
+          listItem.appendChild(dropdownLink);
+          listItem.appendChild(dropdownMenu);
+  
+          navbar.appendChild(listItem);
+        });
+      })
+      .catch(error => console.log(error));
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
